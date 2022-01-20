@@ -25,4 +25,21 @@ const word = async (
   }
 };
 
-export { word };
+const randomWord = async (
+  pos: SpeechPart | undefined
+): Promise<IEntryItem[] | void> => {
+  if (pos === undefined) {
+    Swal.fire("please provide a part of speech for random word search");
+    return;
+  }
+  try {
+    const { data } = await axios.get(`${baseUrl}/get/part/${pos}`);
+    console.log(data);
+    return [data];
+  } catch (err) {
+    console.log(err);
+    Swal.fire("something went wrong");
+  }
+};
+
+export { word, randomWord };

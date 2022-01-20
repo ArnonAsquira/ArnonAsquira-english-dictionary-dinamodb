@@ -31,6 +31,11 @@ button {
     width: 20%;
     border-radius: 5%;
     background-color: #1b9cfc;
+    transition: 0.5s;
+    &:hover {
+      background-color: #3b3b98;
+      color: #bdc581;
+    }
   }
 }
 
@@ -52,5 +57,31 @@ button {
   }
   .def {
     font-size: 2rem;
+  }
+}
+
+input {
+  transition: 0.5s;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+  &:focus {
+    background-color: #58b19f;
+  }
+  &:hover {
+    background-color: #9aecdb;
+  }
+}
+
+select {
+  transition: 0.5s;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+  &:hover {
+    background-color: #d6a2e8;
+  }
+  &:focus {
+    background-color: #fd7272;
   }
 }

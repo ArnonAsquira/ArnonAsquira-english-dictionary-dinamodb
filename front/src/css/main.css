@@ -33,6 +33,13 @@ button:hover {
   width: 20%;
   border-radius: 5%;
   background-color: #1b9cfc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.entries-list li:hover {
+  background-color: #3b3b98;
+  color: #bdc581;
 }
 
 .entry-display {
@@ -57,5 +64,37 @@ button:hover {
 
 .entry-display .def {
   font-size: 2rem;
+}
+
+input {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+}
+
+input:focus {
+  background-color: #58b19f;
+}
+
+input:hover {
+  background-color: #9aecdb;
+}
+
+select {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+}
+
+select:hover {
+  background-color: #d6a2e8;
+}
+
+select:focus {
+  background-color: #fd7272;
 }
 /*# sourceMappingURL=main.css.map */
