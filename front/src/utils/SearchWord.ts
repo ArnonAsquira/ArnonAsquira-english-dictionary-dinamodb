@@ -2,14 +2,25 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { baseUrl } from "../constants/general";
 import { IEntryItem } from "../types/db";
+import { SpeechPart } from "../types/speechPart";
 
-const word = async (word: string): Promise<IEntryItem[] | void> => {
+const word = async (
+  word: string,
+  pos: SpeechPart | undefined
+): Promise<IEntryItem[] | void> => {
   try {
+    if (pos === undefined) {
+      const { data }: { data: IEntryItem[] } = await axios.get(
+        `${baseUrl}/get/${word}`
+      );
+      return data;
+    }
     const { data }: { data: IEntryItem[] } = await axios.get(
-      `${baseUrl}/get/${word}`
+      `${baseUrl}/get/${word}/${pos}`
     );
     return data;
   } catch (err) {
+    console.log(err);
     Swal.fire("something went wrong");
   }
 };
