@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "outDir": "./built",
+    "esModuleInterop": true,
+    "sourceMap": true
+  },
+  "include": ["back/**/*"],
+  "exclude": ["node_modules"]
+}

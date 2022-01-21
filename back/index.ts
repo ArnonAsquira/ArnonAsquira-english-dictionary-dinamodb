@@ -1,6 +1,5 @@
 import app from "./app";
 import { PORT } from "./utils/enviorment-varibales";
+import serverless from "serverless-http";
 
-app.listen(PORT, () => {
-  console.log(`app listening on port ${PORT}`);
-});
+export default serverless(app);
